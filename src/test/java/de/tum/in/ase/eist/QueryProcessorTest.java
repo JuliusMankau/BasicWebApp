@@ -34,5 +34,15 @@ class QueryProcessorTest {
 		String  result= queryProcessor.process("which of the following numbers is the largest: 763, 2");
 		assertEquals("763", result);
 	}
+	@Test
+	void testPlus(){
+		String  result= queryProcessor.process("what is 15 plus 12");
+		assertEquals("27", result);
+	}
+	@Test
+	void testMul(){
+		String  result= queryProcessor.process("what is 15 multiplied by 12");
+		assertEquals("180", result);
+	}
 
 }

@@ -36,13 +36,13 @@ public class QueryProcessor {
             return String.valueOf(max);
         }
         else if(query.contains("what is")&& query.contains("plus")){
-            String[] splitted = query.split(",");
-            return String.valueOf(Integer.valueOf(splitted[3])+Integer.valueOf(splitted[5]));
+            String[] splitted = query.split(" ");
+            return String.valueOf(Integer.valueOf(splitted[2])+Integer.valueOf(splitted[4]));
 
         }
-        else if(query.contains("what is")&& query.contains("multiplied ")){
-            String[] splitted = query.split(",");
-            return String.valueOf(Integer.valueOf(splitted[3])*Integer.valueOf(splitted[6]));
+        else if(query.contains("what is")&& query.contains("multiplied")){
+            String[] splitted = query.split(" ");
+            return String.valueOf(Integer.valueOf(splitted[2])*Integer.valueOf(splitted[5]));
         }
         else{
             return "";
