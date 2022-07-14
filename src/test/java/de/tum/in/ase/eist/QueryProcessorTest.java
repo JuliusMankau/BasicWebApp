@@ -29,5 +29,8 @@ class QueryProcessorTest {
 			fail("Your QueryProcessor should not be case sensitive.");
 		}
 	}
+	@Test
+	void testName(){
+	}
 
 }
