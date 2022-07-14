@@ -40,6 +40,10 @@ public class QueryProcessor {
             return String.valueOf(Integer.valueOf(splitted[3])+Integer.valueOf(splitted[5]));
 
         }
+        else if(query.contains("what is")&& query.contains("multiplied ")){
+            String[] splitted = query.split(",");
+            return String.valueOf(Integer.valueOf(splitted[3])*Integer.valueOf(splitted[6]));
+        }
         else{
             return "";
         }
