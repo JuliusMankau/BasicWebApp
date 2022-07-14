@@ -17,11 +17,11 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "MyTeam";
         } else if (query.contains("largest:")) {
-            String string = query.substring(query.indexOf("largest:"));
+            String string = query.substring(query.indexOf("largest:")+8).trim();
             String[] array = string.split(",");
             int[] intArray = new int[array.length];
             for(int i = 0; i< array.length; i++){
-                intArray[i] = Integer.getInteger(array[i]);
+                intArray[i] = Integer.valueOf(array[i].trim());
             }
             int max = 0;
             for(int i = 0; i< intArray.length; i++){
@@ -33,7 +33,7 @@ public class QueryProcessor {
                 }
             }
             // TODO extend the programm here
-            return "";
+            return String.valueOf(max);
         }
         else{
             return "";
